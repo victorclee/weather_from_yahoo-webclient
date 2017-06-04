@@ -1,0 +1,12 @@
+<h1>5-Day Weather Forecast of <%= "#{@city}, #{@country}" %></h1>
+
+<% @forecasts.each do |forecast| %>
+  <div>
+    <h2><%= forecast['day'] %> - <%= forecast['date'] %></h2>
+    <ul>
+      <li>High: <%= forecast['high'] %></li>
+      <li>Low: <%= forecast['low'] %></li>
+      <li>Condition: <%= forecast['text'] %></li>
+    </ul>
+  </div>
+<% end %>
